@@ -25,11 +25,12 @@ public class SnakeandLadderGame
 				{
 					System.out.println("No play, the player exceeded end position");
 					position=position-dienumber;
+					System.out.println("Position of the player after "+dicecount+" rolls is: "+position);
 				}
 				else
 				{
 					System.out.println("The player moves ahead by "+dienumber+" positions");
-					System.out.println("Current position of the player is: "+position);
+					System.out.println("Current position of the player after "+dicecount+" rolls is: "+position);
 				}
 			}
 			else if(checkOption == IS_SNAKE)
@@ -39,19 +40,21 @@ public class SnakeandLadderGame
 				{
 					position=START_POSITION;
 					System.out.println("The player position is set to start from Zero");
+					System.out.println("Position of the player after "+dicecount+" rolls is: "+position);
 				}
 				else
 				{
 					System.out.println("The player moves behind by "+dienumber+" positions");
-					System.out.println("Current position of the player is: "+position);
+					System.out.println("Current position of the player after "+dicecount+" rolls is: "+position);
 				}
 			}
 			else if(checkOption == IS_NoPLAY)
 			{
 				System.out.println("No play. The player stays in the same position");
-				System.out.println("Current position of the player is: "+position);
+				System.out.println("Current position of the player after "+dicecount+" rolls is: "+position);
 			}
 		}
+		 System.out.println("Total number of times dice was thrown was: "+dicecount);
 	}
 	public static void main(String[] args)
 	{
