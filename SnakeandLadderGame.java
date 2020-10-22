@@ -21,8 +21,16 @@ public class SnakeandLadderGame
 			if(checkOption == IS_LADDER)
 			{
 				position=position+dienumber;
-         	System.out.println("The player moves ahead by "+dienumber+" positions");
-				System.out.println("Current position of the player is: "+position);
+				if(position > 100)
+				{
+					System.out.println("No play, the player exceeded end position");
+					position=position-dienumber;
+				}
+				else
+				{
+					System.out.println("The player moves ahead by "+dienumber+" positions");
+					System.out.println("Current position of the player is: "+position);
+				}
 			}
 			else if(checkOption == IS_SNAKE)
 			{
